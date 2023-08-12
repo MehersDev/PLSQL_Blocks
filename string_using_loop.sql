@@ -1,3 +1,4 @@
+-- This plsql block finds out a word between two spaces
 
 DECLARE
    v_input_string VARCHAR2(100) := 'National Institute of Science and Technology test';
@@ -15,6 +16,7 @@ BEGIN
    
    FOR n IN 1..LENGTH(v_input_string) 
      LOOP
+       
      IF v_spc_count =  0
        THEN
           v_loop_fst:=1;
@@ -51,28 +53,3 @@ BEGIN
    
    DBMS_OUTPUT.PUT_LINE('Word To Show >> ' || TRIM(v_target_word));
 END;
-
-
-
-
-
-
--- another solution
-DECLARE
-   input_string   VARCHAR2(100) := 'National Institute of Science and Technology';
-   space_count    NUMBER := 0;
-   skip_word      VARCHAR2(100) := 'National ';
-   remaining_text VARCHAR2(100);
-BEGIN
-   -- Skip the word "National" and get the remaining text
-   remaining_text := SUBSTR(input_string, LENGTH(skip_word) + 1);
-   
-   FOR i IN 1..LENGTH(remaining_text) LOOP
-      IF ASCII(SUBSTR(remaining_text, i, 1)) = 32 THEN
-         space_count := space_count + 1;
-      END IF;
-   END LOOP;
-   
-   DBMS_OUTPUT.PUT_LINE('Number of spaces: ' || space_count);
-END;
-/
