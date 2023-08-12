@@ -1,3 +1,5 @@
+/* Basic PLSQL BLOCK */
+
 -- creating table
 CREATE TABLE plotbooking(plotid        NUMBER(10)
                         ,plotno        VARCHAR2(20)
@@ -8,7 +10,8 @@ CREATE TABLE plotbooking(plotid        NUMBER(10)
                         ,acost         NUMBER(10)
                         ,fcost         NUMBER(10)
                         );
-                        
+
+                
 -- writing a first pl/sql block                    
 DECLARE 
   v_plotid        plotbooking.plotid%TYPE;
@@ -17,6 +20,7 @@ DECLARE
   v_customername  plotbooking.customername%TYPE;
   v_bcost         plotbooking.bcost%TYPE;
 BEGIN
+  
   SELECT MAX(plotid)+1
   INTO   v_plotid
   FROM   plotbooking
@@ -55,4 +59,5 @@ END;
       
 -- end of block
 
-SELECT * FROM tabs;
+-- checking table for data
+SELECT * FROM plotbooking;
