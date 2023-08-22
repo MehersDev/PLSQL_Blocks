@@ -1,5 +1,5 @@
 DECLARE
-    dob DATE := TO_DATE('1989-11-16', 'YYYY-MM-DD');  -- Date of Birth
+    dob DATE := TO_DATE('1994-07-27', 'YYYY-MM-DD');  -- Date of Birth
     doj DATE := TO_DATE('2023-03-15', 'YYYY-MM-DD');  -- Date of Joining
     retirement_age NUMBER := 65;  -- Retirement Age
     months_remaining NUMBER;
