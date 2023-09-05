@@ -34,14 +34,12 @@ Contributions to this repository are welcome! If you have PL/SQL examples, scrip
 2. **Clone the Repository**: Clone your forked repository to your local development environment using the following command.
 
 ```shell
-Copy code
    git clone https://github.com/mehersdev/PLSQL_BLOCK.git
 ```
 
 3. **Create a New Branch**: Create a new branch for your contribution:
 
 ```shell
-Copy code
     git checkout -b feature/my-contribution
 ```
 
@@ -50,7 +48,6 @@ Copy code
 5. **Commit and Push**: Commit your changes and push them to your forked repository:
 
 ```shell
-Copy code
     git add .
     git commit -m "Added my PL/SQL contribution"
     git push origin feature/my-contribution
